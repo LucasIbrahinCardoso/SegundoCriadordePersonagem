@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <title>Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Eagle+Lake&family=Manufacturing+Consent&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Criador de Personagens<br>RPG</h1>
+        <p class="textinho">Crie seu herói e prepare-se para a aventura!</p>
+        <hr>
+    </header>
+
+    <main class="container">
+        <section class="secao">
+            <h2>Informações Básicas:</h2>
+
+            <div class="formulario-grupo">
+                <div class="div-nome-personagem"><label for="nome-personagem">Nome do Personagem:</label></div>
+                <br>             
+                <input type="text" id="nome-personagem" placeholder="Digite o nome do seu personagem" maxlength="50">
+                <br><br>
+            </div>
+
+            <div class="pontos-info">
+                <div class="ponto-item">
+                    <span>Pontos de Atributos:</span>
+                    <span id="pontos-atributos-disponiveis">30</span>
+                </div>
+                <div class="pontos-item">
+                    <span>Pontos de Skills:</span>
+                    <span id="pontos-skills-disponiveis">20</span>
+                </div>
+                <div class="pontos-item">
+                    <span>Pontos de Traits:</span>
+                    <span id="pontos-traits-disponivel">10</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2>Atributos:</h2>
+            <p class="descricao">Distribua seus pontos entre os atributos. Cada ponto aumenta o atributo em 1.</p>
+            <div class="atributos-grid" id="atributos-container">
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2>Skills (Perícias):</h2>
+            <p class="descricao">Compre skills com seus pontos de skill.</p>
+            <div class="skills-lista" id="skills-container">
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2>Traits (Características):</h2>
+            <p class="descricao">Traits especiais que modificam como seu personagem funciona.</p>
+
+        <div class="traits-lista" id="traits-container">
+        </div>
+        </section>
+
+        <section class="secao resumo">
+            <h2>Resumo do Personagem</h2>
+            <div id="resumo-personagem" class="resumo-conteudo">
+                <div class="area-do-nomezin">
+                    <span id="nome-escolhido" class="class-nome-escolhido"></span>
+                </div>
+                <p>Preencha os campos acima para ver o resumo</p>
+            </div>
+        </section>
+
+        <div class="botoes-acao">
+            <button id="btn-limpar" class="btn btn-secundario">🔄 Limpar</button>
+            <button id="btn-criar" class="btn btn-primario">✅ Criar Personagem</button>
+        </div>
+
+        <div id="mensagem-resultado" class="mensagem"></div>
+    </main>
+    
+    <footer class="footer">
+        <p>Character Creator 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

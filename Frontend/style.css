@@ -1,0 +1,92 @@
+.manufacturing-consent-regular {
+  font-family: "Manufacturing Consent", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.eagle-lake-regular {
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.kings-regular {
+  font-family: "Kings", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.pontos-info{
+  font-family: "Cinzel Decorative";
+  margin: auto 25%;
+}
+
+
+
+.formulario-grupo input {
+  margin-left: 40%;
+  width: 20%;  
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "Manufacturing Consent";
+  color: #8C7342;
+  justify-self: center;
+  text-align: center;
+  
+}
+
+.textinho {
+  display: block;
+  justify-self: center;
+  text-align: center; 
+}
+
+.descricao {
+  margin-left: 25%;
+  font-size: large;
+  margin-bottom: 50px;
+}
+
+div .div-nome-personagem {
+  justify-self: center;
+  text-align: center;  
+}
+
+hr {
+  margin: auto 25% 100px;
+}
+
+.secao h2 {
+  font-family: "Eagle Lake";
+  margin-left: 25%;
+  color: whitesmoke;
+  padding-left: 15px;
+  border-left: 2px solid whitesmoke;
+}
+
+body {
+  background-color: #121214;
+  color: #A6A6A6;
+}
+
+button {
+  background-color: #7D8491;
+}
