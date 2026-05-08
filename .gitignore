@@ -1,2 +1,9 @@
-
 .vscode/
+.env
+conector.json
+__pycache__/
+*.pyc
+*.pyo
+venv/
+node_modules/
+.DS_Store
