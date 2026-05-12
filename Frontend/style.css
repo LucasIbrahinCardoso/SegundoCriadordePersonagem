@@ -42,6 +42,7 @@
   margin-left: 40%;
   width: 20%;  
   text-align: center;
+  
 }
 
 h1 {
@@ -87,6 +88,32 @@ body {
   color: #A6A6A6;
 }
 
+.pontos-totais {
+  color: #8C7342;
+  font-size: 20px;
+}
+
 button {
   background-color: #7D8491;
+};
+
+.atributos-grid{
+  white-space: pre;
+}
+
+.p-atributos {
+  margin: 0px 25%;
+  font-size: 18px;
+}
+
+.marker {
+  color: #8C7342;
+  font-size: 11px;
+}
+
+.atributos-grid input {
+  width: 42px;
+  background-color: #121214;
+  color: #8C7342;
+  border: none;
 }

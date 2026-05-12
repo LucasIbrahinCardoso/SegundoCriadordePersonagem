@@ -1,4 +1,4 @@
-class Atributos{
+export default class Atributos{
     constructor(dono, forca, velocidade, destreza, resistencia, inteligencia, sabedoria, vontade, carisma, influencia){
         this.dono = dono
         this.forc = forca;

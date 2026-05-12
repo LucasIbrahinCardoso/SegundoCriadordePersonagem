@@ -32,23 +32,32 @@
             <div class="pontos-info">
                 <div class="ponto-item">
                     <span>Pontos de Atributos:</span>
-                    <span id="pontos-atributos-disponiveis">30</span>
+                    <span class="pontos-totais" id="pontos-atributos-disponiveis">30</span>
                 </div>
                 <div class="pontos-item">
                     <span>Pontos de Skills:</span>
-                    <span id="pontos-skills-disponiveis">20</span>
+                    <span class="pontos-totais" id="pontos-skills-disponiveis">20</span>
                 </div>
                 <div class="pontos-item">
                     <span>Pontos de Traits:</span>
-                    <span id="pontos-traits-disponivel">10</span>
+                    <span class="pontos-totais" id="pontos-traits-disponivel">10</span>
                 </div>
             </div>
         </section>
 
         <section class="secao">
             <h2>Atributos:</h2>
-            <p class="descricao">Distribua seus pontos entre os atributos. Cada ponto aumenta o atributo em 1.</p>
-            <div class="atributos-grid" id="atributos-container">0
+            <p class="descricao">Distribua seus pontos entre os atributos. A cada 2 pontos aumenta o atributo em 1.</p>
+            <div class="atributos-grid">
+                <p class="p-atributos"><span class="marker">✦︎</span> Força: <input type="number" placeholder="0-10" min="0" max="10" id="forç">
+                <p class="p-atributos"><span class="marker">✦︎</span> Velocidade: <input type="number" placeholder="0-10" min="0" max="10" id="velo">
+                <p class="p-atributos"><span class="marker">✦︎</span> Destreza: <input type="number" placeholder="0-10" min="0" max="10" id="des">
+                <p class="p-atributos"><span class="marker">✦︎</span> Resistência: <input type="number" placeholder="0-10" min="0" max="10" id="res">
+                <p class="p-atributos"><span class="marker">✦︎</span> Inteligência: <input type="number" placeholder="0-10" min="0" max="10" id="int">
+                <p class="p-atributos"><span class="marker">✦︎</span> Sabedoria: <input type="number" placeholder="0-10" min="0" max="10" id="sab">
+                <p class="p-atributos"><span class="marker">✦︎</span> Vontade: <input type="number" placeholder="0-10" min="0" max="10" id="von">
+                <p class="p-atributos"><span class="marker">✦︎</span> Carisma: <input type="number" placeholder="0-10" min="0" max="10" id="car">
+                <p class="p-atributos"><span class="marker">✦︎</span> Influência: <input type="number" placeholder="0-10" min="0" max="10" id="inf">
             </div>
         </section>
 
@@ -71,7 +80,7 @@
             <h2>Resumo do Personagem</h2>
             <div id="resumo-personagem" class="resumo-conteudo">
                 <div class="area-do-nomezin">
-                    <span id="nome-escolhido" class="class-nome-escolhido">0</span>
+                    <span id="nome-escolhido" class="class-nome-escolhido"></span>
                 </div>
                 <p>Preencha os campos acima para ver o resumo</p>
             </div>
@@ -89,6 +98,6 @@
         <p>Character Creator 2026</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
-</html>
+</html
