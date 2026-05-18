@@ -1,11 +1,13 @@
+from pydantic import BaseModel
 
-
-class Personagem:
-    def __init__(self, nome, pontos_iniciais=100):
-        self.nome = nome
-        self.pontos_iniciais = pontos_iniciais
-        self.skills = []
-        self.traits = []
-
-    
-        
+class Personagem(BaseModel):
+    fo : int
+    ve : int
+    de : int
+    re : int
+    inte : int
+    sa : int
+    vo : int
+    ca : int
+    influ : int
+    nomi : str

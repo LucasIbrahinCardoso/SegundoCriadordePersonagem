@@ -1,6 +1,5 @@
 import mysql.connector
 from mysql.connector import Error
-import os
 
 import json as j
 
@@ -11,31 +10,7 @@ try:
 except FileNotFoundError:
     print("Erro: O arquivo json não foi encontrado.")
 
-class BancoDados:
-    def __init__(self):
-        self.host = config["HOST"]
-        self.user = config["USER"]
-        self.password = config["PASSWORD"]
-        self.database = config["DATABASE"]
-        self.conexao = None
-
-    def conectar(self):
-        try:
-            self.conexao = mysql.connector.connect(
-                host=self.host,
-                user = self.user,
-                password = self.password,
-                database = self.database
-            )
-            print("Conectado ao MySQL")
-            return True
-        except Error as erro:
-            print(f"Erro ao conectar: {erro}")
-            return False
+def o_sql():
+    return mysql.connector.connect(host = config["HOST"], user = config["USER"], password = config["PASSWORD"], database = config["DATABASE"])
     
-    def desconectar(self):
-        if self.conexao and self.conexao.is_connected():
-            self.conexao.close()
-            print("Desconectado do MySQL")
 
-db = BancoDados()
