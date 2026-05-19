@@ -1,7 +1,11 @@
 let inputNome = document.getElementById('nome-personagem');
 let nomezin = inputNome.value
 let spanNome = document.getElementById('nome-escolhido');
-let atributosTotal = document.getElementById('pontos-atributos-disponiveis')
+let atributosTotal = document.getElementById('pontos-atributos-disponiveis');
+let maximo = 30
+atributosTotal.innerText = maximo
+
+let mensagem = document.getElementById('mensagem-resultado');
 
 const dicioElementos = {
     fo :  [document.getElementById('forç'), 0],
@@ -13,9 +17,23 @@ const dicioElementos = {
     vo : [document.getElementById('von'), 0],
     ca : [document.getElementById('car'), 0],
     influ : [document.getElementById('inf'), 0]
+};
+
+function recalcularPontos() {
+    let totalGasto = 0;
+    Object.values(dicioElementos).forEach((itens) => {
+        totalGasto += itens[1];
+    });
+    let pontosRestantes = 0;
+    if (atributosTotal.innerText > 0){
+        pontosRestantes = maximo - totalGasto
+    } else {
+        console.log("Pontos insuficientes.")
+    };
+
+    atributosTotal.innerText = pontosRestantes;
+    console.log(Object.values(dicioElementos))
 }
-
-
 
 
 inputNome.addEventListener('keydown', function(event){
@@ -26,16 +44,16 @@ inputNome.addEventListener('keydown', function(event){
 });
 
 Object.values(dicioElementos).forEach((itens) => {
-    const inputElemento = itens[0];
+    let inputElemento = itens[0];
 
     inputElemento.addEventListener('input', (event) =>{
-        const valorNumerico = Number(event.target.value);
-        
-        itens[1] = valorNumerico
-    })
-})
-
-
+        let valorNumerico = Number(event.target.value);
+        if (atributosTotal.innerText > 0){
+            itens[1] = valorNumerico;
+        }
+        recalcularPontos();
+    });
+});
 
 
 let botao_criar = document.getElementById('btn-criar');
@@ -56,8 +74,11 @@ botao_criar.addEventListener('click', async function(){
     try {
         const resposta = await fetch('http://127.0.0.1:8000/salvando/', {
             method: "POST", headers: { "Content-Type" : "application/json"}, body: personagem
-        })}
+        })
+    }
     catch (erro) {
         console.error(erro);
     }
+    mensagem.innerText(resposta["mensagem"])
 });
+

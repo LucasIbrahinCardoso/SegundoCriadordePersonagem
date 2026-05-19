@@ -5,7 +5,7 @@ from logic import Personagem
 
 app = FastAPI(
     title="Criador de Personagem V2",
-    version="0.1.1",
+    version="0.1.2",
     description="Tentando novamente fazer o Criador de Personagem",
 )
 
